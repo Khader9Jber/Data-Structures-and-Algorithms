@@ -21,6 +21,7 @@ public:
     // __attribute__((unused))
     explicit Vector(ull sz, T default_value = T()) {
         capacity = size = sz;
+        allocate_memory(capacity);
         for (int i = 0; i < size; ++i) {
             data[i] = default_value;
         }
@@ -34,4 +35,8 @@ public:
         return capacity;
     }
 
+private:
+    void allocate_memory(ull cap){
+        data = new T[cap];
+    }
 };
