@@ -34,11 +34,14 @@ public:
     ull get_size() {
         return capacity;
     }
-    T begin(){
+    T get_begin(){
         return data[0];
     }
-    T back(){
+    T get_back(){
         return data[size - 1];
+    }
+    T& get_data(){
+        return data;
     }
 private:
     void allocate_memory(ull cap){

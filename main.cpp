@@ -10,8 +10,8 @@ int main() {
 
 //    Vector<int> v = Vector<int>();
     Vector<int> v(5, 6);
-    cout << v.back() << endl;
-    cout << v.begin() << endl;
+    cout << v.get_back() << endl;
+    cout << v.get_begin() << endl;
 //    show(v);
     return 0;
 }
