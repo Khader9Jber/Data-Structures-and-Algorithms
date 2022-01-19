@@ -34,7 +34,12 @@ public:
     ull get_size() {
         return capacity;
     }
-
+    T begin(){
+        return data[0];
+    }
+    T back(){
+        return data[size - 1];
+    }
 private:
     void allocate_memory(ull cap){
         data = new T[cap];
