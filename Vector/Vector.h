@@ -43,6 +43,14 @@ public:
     T& get_data(){
         return data;
     }
+    T& at(ull index){
+        if(index >= size)
+            throw invalid_argument("INVALID INDEX");
+        return data[index];
+    }
+    T& operator[](ull index){
+        return data[index];
+    }
 private:
     void allocate_memory(ull cap){
         data = new T[cap];
