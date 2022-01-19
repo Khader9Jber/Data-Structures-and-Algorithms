@@ -1,3 +1,23 @@
 # ninja log v5
-1	562	6642892576396976	CMakeFiles/Data_Structures_and_Algorithms.dir/Main.cpp.obj	e8174f1d13cfea01
-565	771	6642892578456994	Data_Structures_and_Algorithms.exe	b8c52c6ebfbc2edb
+3	780	6642924443696997	CMakeFiles/Data_Structures_and_Algorithms.dir/Main.cpp.obj	e8174f1d13cfea01
+780	914	6642924444973589	Data_Structures_and_Algorithms.exe	b8c52c6ebfbc2edb
+1	971	6642929475090244	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+973	1096	6642929476354576	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
+3	340	6642929709596276	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+340	463	6642929710785816	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
+3	992	6642930050496354	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+992	1123	6642930051870555	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
+3	614	6642930424374505	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+615	743	6642930425623049	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
+4	381	6642930854345301	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+382	509	6642930855692539	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
+3	369	6642931013630866	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+369	495	6642931014802002	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
+5	430	6642931144752392	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+430	568	6642931146185506	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
+3	372	6642932058069282	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+373	505	6642932059390169	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
+3	381	6642932246708878	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+381	545	6642932248298023	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
+3	838	6642934964280322	CMakeFiles/Data_Structures_and_Algorithms.dir/main.cpp.obj	8978ceddffadf0ca
+839	968	6642934965616545	Data_Structures_and_Algorithms.exe	dcda70a20f34d7c9
