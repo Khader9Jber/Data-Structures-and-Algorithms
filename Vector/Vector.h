@@ -26,5 +26,12 @@ public:
         }
     }
 
+    ull get_capacity() {
+        return capacity;
+    }
+
+    ull get_size() {
+        return capacity;
+    }
 
 };
