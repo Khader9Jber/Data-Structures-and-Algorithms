@@ -34,25 +34,40 @@ public:
     ull get_size() {
         return capacity;
     }
-    T get_begin(){
+
+    T get_begin() {
         return data[0];
     }
-    T get_back(){
+
+    T get_back() {
         return data[size - 1];
     }
-    T& get_data(){
+
+    T &get_data() {
         return data;
     }
-    T& at(ull index){
-        if(index >= size)
+
+    T &at(ull index) {
+        if (index >= size)
             throw invalid_argument("INVALID INDEX");
         return data[index];
     }
-    T& operator[](ull index){
+
+    T &operator[](ull index) {
         return data[index];
     }
+
+    void pop_back() {
+        // I need to add exception handling if the vector was empty and the programmer tried to pop_back again
+        size--;
+    }
+
+    void clear(){
+        size = 0;
+    }
+
 private:
-    void allocate_memory(ull cap){
+    void allocate_memory(ull cap) {
         data = new T[cap];
     }
 };
