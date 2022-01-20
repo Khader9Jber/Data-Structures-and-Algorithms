@@ -31,13 +31,15 @@ int main() {
     Vector<int> v(5, 6);
 
     v[4] = 9;
-    cout << v.get_back() << endl;
     v.pop_back();
+    show(v);
+
     v.push_back(2);
+    show(v);
+
     cout << v.get_back() << endl;
     cout << v.get_begin() << endl;
     cout << v.at(3) << endl;
     cout << v[4] << endl;
-    show(v);
     return 0;
 }

@@ -32,7 +32,7 @@ public:
     }
 
     ull get_size() {
-        return capacity;
+        return size;
     }
 
     T get_begin() {
@@ -43,7 +43,7 @@ public:
         return data[size - 1];
     }
 
-    T* &get_data() {
+    T *&get_data() {
         return data;
     }
 
@@ -83,12 +83,16 @@ public:
         }
     }
 
+    bool empty() {
+        return size == 0;
+    }
+
 private:
-    T* allocate_memory(ull cap) {
+    T *allocate_memory(ull cap) {
         return new T[cap];
     }
 
-    void deallocate_memory(T* &memory) {
+    void deallocate_memory(T *&memory) {
         delete memory;
     }
 };
