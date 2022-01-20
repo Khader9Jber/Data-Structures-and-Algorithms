@@ -21,7 +21,7 @@ public:
     // __attribute__((unused))
     explicit Vector(ull sz, T default_value = T()) {
         capacity = size = sz;
-        allocate_memory(capacity);
+        data = allocate_memory(capacity);
         for (int i = 0; i < size; ++i) {
             data[i] = default_value;
         }
@@ -43,7 +43,7 @@ public:
         return data[size - 1];
     }
 
-    T &get_data() {
+    T* &get_data() {
         return data;
     }
 
@@ -62,12 +62,33 @@ public:
         size--;
     }
 
-    void clear(){
+    void clear() {
         size = 0;
     }
 
+    void push_back(const T &value) {
+        if (size < capacity) {
+            data[size] = value;
+            size++;
+        } else {
+            capacity *= 2;
+            if (capacity == 0) capacity = 1;
+            T *temp = allocate_memory(capacity);
+            for (int i = 0; i < size; ++i) {
+                temp[i] = data[i];
+            }
+            deallocate_memory(data);
+            data = temp;
+            data[size++] = value;
+        }
+    }
+
 private:
-    void allocate_memory(ull cap) {
-        data = new T[cap];
+    T* allocate_memory(ull cap) {
+        return new T[cap];
+    }
+
+    void deallocate_memory(T* &memory) {
+        delete memory;
     }
 };

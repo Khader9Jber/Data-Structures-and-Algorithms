@@ -3,7 +3,8 @@
 #include "Vector/Vector.h"
 
 #define endl '\n'
-using namespace std;
+
+
 
 int main() {
     vector<int> vv(1);
@@ -20,7 +21,9 @@ int main() {
     Vector<int> v(5, 6);
 
     v[4] = 9;
+    cout << v.get_back() << endl;
     v.pop_back();
+    v.push_back(2);
     cout << v.get_back() << endl;
     cout << v.get_begin() << endl;
     cout << v.at(3) << endl;
