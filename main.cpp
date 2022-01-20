@@ -4,6 +4,16 @@
 
 #define endl '\n'
 
+using namespace std;
+template <typename T>
+void show(Vector<T> vec) {
+    cout << "Capacity: #" << vec.get_capacity() << " Size: #" << vec.get_size() << endl;
+    string content = "";
+    for (int i = 0; i < vec.get_size(); ++i) {
+       content += (to_string(vec[i]) + " ") ;
+    }
+    cout << content << endl;
+}
 
 
 int main() {
@@ -28,7 +38,6 @@ int main() {
     cout << v.get_begin() << endl;
     cout << v.at(3) << endl;
     cout << v[4] << endl;
-
-//    show(v);
+    show(v);
     return 0;
 }
