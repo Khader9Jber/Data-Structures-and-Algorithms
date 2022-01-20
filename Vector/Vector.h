@@ -1,5 +1,3 @@
-#include <iostream>
-
 #define ull unsigned long long
 #define endl '\n'
 using namespace std;
@@ -7,84 +5,83 @@ using namespace std;
 template<typename T>
 class Vector {
 private:
-    T *data;
-    ull size;
-    ull capacity;
+    T *_data;
+    ull _size;
+    ull _capacity;
 public:
     /*
    explicit Vector() {
-       data = NULL;
-       capacity = size = 0;
+       _data = NULL;
+       _capacity = _size = 0;
    } */
-    explicit Vector() : data(), size(), capacity() {}
+    explicit Vector() : _data(), _size(), _capacity() {}
 
-    // __attribute__((unused))
     explicit Vector(ull sz, T default_value = T()) {
-        capacity = size = sz;
-        data = allocate_memory(capacity);
-        for (int i = 0; i < size; ++i) {
-            data[i] = default_value;
+        _capacity = _size = sz;
+        _data = allocate_memory(_capacity);
+        for (int i = 0; i < _size; ++i) {
+            _data[i] = default_value;
         }
     }
 
-    ull get_capacity() {
-        return capacity;
+    ull capacity() {
+        return _capacity;
     }
 
-    ull get_size() {
-        return size;
+    ull size() {
+        return _size;
     }
 
-    T get_begin() {
-        return data[0];
+    T& front() {
+        return _data[0];
     }
 
-    T get_back() {
-        return data[size - 1];
+    T& back() {
+        return _data[_size - 1];
     }
 
-    T *&get_data() {
-        return data;
+    T *&data() {
+        return _data;
     }
 
     T &at(ull index) {
-        if (index >= size)
+        if (index >= _size)
             throw invalid_argument("INVALID INDEX");
-        return data[index];
+        return _data[index];
     }
 
     T &operator[](ull index) {
-        return data[index];
+        return _data[index];
     }
 
     void pop_back() {
         // I need to add exception handling if the vector was empty and the programmer tried to pop_back again
-        size--;
+        _size--;
     }
 
     void clear() {
-        size = 0;
+        _size = 0;
     }
 
     void push_back(const T &value) {
-        if (size < capacity) {
-            data[size] = value;
-            size++;
+        if (_size < _capacity) {
+            _data[_size] = value;
+            _size++;
         } else {
-            capacity *= 2;
-            if (capacity == 0) capacity = 1;
-            T *temp = allocate_memory(capacity);
-            for (int i = 0; i < size; ++i) {
-                temp[i] = data[i];
+            _capacity *= 2;
+            if (_capacity == 0) _capacity = 1;
+            T *temp = allocate_memory(_capacity);
+            for (int i = 0; i < _size; ++i) {
+                temp[i] = _data[i];
             }
-            deallocate_memory(data);
-            data = temp;
-            data[size++] = value;
+            deallocate_memory(_data);
+            _data = temp;
+            _data[_size++] = value;
         }
     }
 
     bool empty() {
-        return size == 0;
+        return _size == 0;
     }
 
 private:

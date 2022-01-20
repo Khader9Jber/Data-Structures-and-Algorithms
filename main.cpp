@@ -5,12 +5,13 @@
 #define endl '\n'
 
 using namespace std;
-template <typename T>
+
+template<typename T>
 void show(Vector<T> vec) {
-    cout << "Capacity: #" << vec.get_capacity() << " Size: #" << vec.get_size() << endl;
+    cout << "Capacity: #" << vec.capacity() << " Size: #" << vec.size() << endl;
     string content = "";
-    for (int i = 0; i < vec.get_size(); ++i) {
-       content += (to_string(vec[i]) + " ") ;
+    for (int i = 0; i < vec.size(); ++i) {
+        content += (to_string(vec[i]) + " ");
     }
     cout << content << endl;
 }
@@ -18,13 +19,18 @@ void show(Vector<T> vec) {
 
 int main() {
     vector<int> vv(1);
+    vv.front() = 7;
+    vv.back() = 6;
+    vv.begin();
+    vv.end();
+    cout << vv.front() << endl;
 //   vv.pop_back();
 //    vv.pop_back();
 //    vv.pop_back();
 //    vv.push_back(4);
 //
 //    vv.at(0) = 3;
-//    cout << vv.size() << endl;
+//    cout << vv._size() << endl;
 
 
 //    Vector<int> v = Vector<int>();
@@ -36,9 +42,9 @@ int main() {
 
     v.push_back(2);
     show(v);
-
-    cout << v.get_back() << endl;
-    cout << v.get_begin() << endl;
+    v.front() = 1;
+    cout << v.back() << endl;
+    cout << v.front() << endl;
     cout << v.at(3) << endl;
     cout << v[4] << endl;
     return 0;
